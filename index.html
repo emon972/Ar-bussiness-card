@@ -2,19 +2,26 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>AR Business Card</title>
+  <title>EMON AR Business Card</title>
 
   <!-- A-Frame -->
   <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
 
   <!-- MindAR -->
   <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.4/dist/mindar-image-aframe.prod.js"></script>
+
+  <!-- Optional: Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+  <style>
+    body { margin: 0; overflow: hidden; font-family: 'Roboto', sans-serif; }
+    a-text { font-weight: bold; }
+  </style>
 </head>
 
-<body style="margin:0; overflow:hidden;">
-
+<body>
 <a-scene
-  mindar-image="imageTargetSrc: targets.mind;"
+  mindar-image="imageTargetSrc: targets.mind; autoStart: true;"
   vr-mode-ui="enabled: false"
   device-orientation-permission-ui="enabled: false">
 
@@ -27,7 +34,7 @@
     <a-text value="EMON"
             position="0 0.25 0"
             align="center"
-            color="white"
+            color="#ffffff"
             width="2">
     </a-text>
 
@@ -35,28 +42,37 @@
     <a-text value="Creative Technologist"
             position="0 0.1 0"
             align="center"
-            color="yellow"
+            color="#FFD700"
             width="2">
     </a-text>
 
     <!-- CALL BUTTON -->
-    <a-plane position="0 -0.2 0"
-             width="0.9"
-             height="0.3"
-             color="#00ff88"
-             onclick="window.location.href='tel:+88018560963067'">
+    <a-plane position="0 -0.15 0" width="0.9" height="0.25" color="#00ff88"
+             onclick="window.location.href='tel:+8801856096307'">
     </a-plane>
+    <a-text value="CALL ME" position="0 -0.15 0.01" align="center" color="#000000" width="2"></a-text>
 
-    <a-text value="CALL ME"
-            position="0 -0.2 0.01"
-            align="center"
-            color="black"
-            width="2">
-    </a-text>
+    <!-- WHATSAPP BUTTON -->
+    <a-plane position="0 -0.45 0" width="0.9" height="0.25" color="#25D366"
+             onclick="window.location.href='https://wa.me/8801856096307'">
+    </a-plane>
+    <a-text value="WHATSAPP" position="0 -0.45 0.01" align="center" color="#000000" width="2"></a-text>
+
+    <!-- FACEBOOK BUTTON -->
+    <a-plane position="0 -0.75 0" width="0.9" height="0.25" color="#3b5998"
+             onclick="window.location.href='https://www.facebook.com/emon972'">
+    </a-plane>
+    <a-text value="FACEBOOK" position="0 -0.75 0.01" align="center" color="#ffffff" width="2"></a-text>
+
+    <!-- INSTAGRAM BUTTON -->
+    <a-plane position="0 -1.05 0" width="0.9" height="0.25" color="#C13584"
+             onclick="window.location.href='https://www.instagram.com/emon972'">
+    </a-plane>
+    <a-text value="INSTAGRAM" position="0 -1.05 0.01" align="center" color="#ffffff" width="2"></a-text>
 
   </a-entity>
 
 </a-scene>
-
 </body>
 </html>
+
